@@ -1,4 +1,4 @@
-function hasTargetSum(array, target) {
+function hasTargetSum1(array, target) {
   // Write your algorithm here
   //given an array of numbers and a target number, see if any
   //two numbers in the array add up to the target
@@ -42,12 +42,24 @@ function binarySearch(array, target) {
   return -1;
 }
 
-hasTargetSum([1, 2, 5], 4);
-
+function hasTargetSum3(array, target) {
+  // alternate solution using objects
+  const seen = {};
+  for (let i = 0; i < array.length; i++) {
+    const pair = target - array[i];
+    if (seen[pair]) {
+      return true;
+    } else {
+      seen[array[i]] = true;
+    }
+  }
+  return false;
+}
 /* 
   Write the Big O time complexity of your function here
   Solution 1: O(n^2) time, O(n) space
   Solution 2: O(nlogn) time, O(n^2) space? not sure
+  Solution 3: O(n) time, O(n) space
 */
 
 /* 
@@ -67,6 +79,16 @@ hasTargetSum([1, 2, 5], 4);
     otherwise, end before midpoint
 
   nlogn + nlogn = 2(nlogn) = nlogn
+
+  OR
+
+  iterate through array (n)
+  check object to see if the element's pair has already been seen
+  if yes, return true
+  if no, create key value pair for the element with true as the value
+  return false if we get to the end without returning
+
+  O(n)
 */
 
 /*
