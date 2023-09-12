@@ -46,7 +46,8 @@ hasTargetSum([1, 2, 5], 4);
 
 /* 
   Write the Big O time complexity of your function here
-  O(n^2) for solution 1, O(nlogn) for solution 2
+  Solution 1: O(n^2) time, O(n) space
+  Solution 2: O(nlogn) time, O(n^2) space? not sure
 */
 
 /* 
