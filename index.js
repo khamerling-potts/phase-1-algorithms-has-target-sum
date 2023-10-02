@@ -1,4 +1,4 @@
-function hasTargetSum1(array, target) {
+function hasTargetSum(array, target) {
   // Write your algorithm here
   //given an array of numbers and a target number, see if any
   //two numbers in the array add up to the target
